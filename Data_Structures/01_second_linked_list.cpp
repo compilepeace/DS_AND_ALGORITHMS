@@ -21,7 +21,7 @@ int main()
 	head = NULL;
 	
 
-	int i, n;
+	unsigned int i, n;
 	unsigned int mid;
 
 	// Getting a list as input from the user
@@ -78,7 +78,6 @@ void push_node(int n)
 
 void push_node_at_head(int n)
 {
-	struct Node *iter;
 	struct Node *temp = (struct Node *) malloc(sizeof(struct Node));
 	
 	if (temp == NULL)

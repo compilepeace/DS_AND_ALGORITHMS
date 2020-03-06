@@ -54,8 +54,8 @@ void push(long long int val)
 long long int pop()
 {
 	if (top == -1){
-		fprintf(stdout, "Stack empty\n", __FUNCTION__);
-		return;
+		fprintf(stdout, "%s: Stack empty\n", __FUNCTION__);
+		return 0xff;
 	}
 	return stack[top--]; 
 }

@@ -32,10 +32,10 @@ void infix_to_postfix(char *exp)
 	int marker = 0;
 
 	// Parse the infix expresion - 'exp'
-	for (int i=0 ; i < strlen(exp) ; ++i) {
+	for (unsigned int i=0 ; i < strlen(exp) ; ++i) {
 	
 		// If the character encountered is an operand character, append it into the result string
-		if ( int ret = is_digit( exp[i] ) ) {
+		if ( is_digit( exp[i] ) ) {
 			*(result_string + marker++) = exp[i]; 			
 			continue;
 		}	

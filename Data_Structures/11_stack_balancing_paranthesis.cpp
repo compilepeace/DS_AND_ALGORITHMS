@@ -25,7 +25,7 @@ int main()
 void check_balanced_symbols(char *input)
 {
 	stack<char> symbols;
-	int i = 0;
+	unsigned int i = 0;
 
 	// Parse the string character-by-character
 	while(i < strlen(input)) {

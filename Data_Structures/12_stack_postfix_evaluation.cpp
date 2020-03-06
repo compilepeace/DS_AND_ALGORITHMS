@@ -49,7 +49,7 @@ void postfix_evaluation(char *postfix_input)
 
 	cout << "\n";
 	// Parse the postfix_input string
-	for (int i = 0; i < strlen(postfix_input) ; ++i) {
+	for (unsigned int i = 0; i < strlen(postfix_input) ; ++i) {
 
 		// If an operand (number) is encountered, push it onto the stack 
 		// and continue scanning next character	

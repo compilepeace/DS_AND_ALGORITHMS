@@ -34,7 +34,6 @@ int main()
 void delete_node(int position)
 {
 	struct Node *iter, *temp;	
-	unsigned int i=0;
 	
 	if (position == 1)
 	{
