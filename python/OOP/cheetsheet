@@ -1,0 +1,10 @@
+# By default every class inherits from an 'object class'
+
+class Binary:			# This class does not inherit from anything
+
+There are 3 methods which an object class gives - 
+
+> __new__  : To create objects
+> __init__ : To initialize objects
+> __str__  : This gives the description of the class whenever we try to print the object 
+
