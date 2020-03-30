@@ -4,9 +4,9 @@
 using namespace std;
 
 
-char *Compress(char *input)
+char *RunLengthEncoding(char *input)
 {
-	// Validation
+	// Validate the input string
 	if (strlen(input) > 100) {
 		fprintf(stderr, "A liar, string length is more than 100!\n");
 		exit(0x2);
@@ -14,8 +14,6 @@ char *Compress(char *input)
 
 	// Allocate some memory on heap segment
 	char *result = (char *)malloc( strlen(input) * 2 + 1);
-
-
 	int i = 0, j = 0, count = 0;
 
 	// Iterate until the end of input string
@@ -38,12 +36,9 @@ char *Compress(char *input)
 	}
 	
 	result[j] = '\x00';                                             // Step 5
-
 	
-
-	return result;
+return result;
 }
-
 
 
 
@@ -55,7 +50,8 @@ int main(int argc, char **argv)
 		exit(0x1);
 	}
 
-	char *result = Compress(argv[1]);
+	char *result = RunLengthEncoding(argv[1]);
+	cout << result << '\n';
 
-	cout << result;
+return 0x0;
 }
