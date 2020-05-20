@@ -1,9 +1,10 @@
-
+import sys
+INT_MIN = -sys.maxsize
 
 def maxSubarraySum(l):
 
 	sum_so_far = 0
-	overall = 0 
+	overall = INT_MIN 
 
 	for i in range(0, len(l)):
 		sum_so_far = max(l[i], sum_so_far + l[i])
