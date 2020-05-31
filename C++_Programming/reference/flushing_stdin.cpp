@@ -11,6 +11,10 @@ int main()
 	
 	cin >> a;
 
+    // Simply
+    cin.get();      // Gets the value '\n' pressed after giving input to 'a'
+
+
 	// Flush the input buffer
 	// <1> Discards the input buffer and initial whitespaces of the string 's'
 	//cin >> ws;
