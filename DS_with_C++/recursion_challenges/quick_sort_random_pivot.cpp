@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 
@@ -6,8 +8,13 @@ using namespace std;
 // side contains all elements larger than pivot element.
 int partition(int a[], int s, int e)
 {
-    int pivot = a[e];
-    int k = s;
+	srand(time(0));
+    int pivotIndex = (rand() % (e - s + 1)) + s;
+    int pivot = a[pivotIndex];
+
+	swap(a[pivotIndex], a[e]);                  // Place the pivot at the end 'e'
+    
+	int k = s;
 
     // Start placing all the elements less than pivot (at positions starting from 0th index)
     for (int i = s; i < e; ++i){
@@ -33,14 +40,22 @@ void quickSort(int a[], int s, int e)
 
 }
 
-int main()
-{
-    int a[] = {2, 7, 8, 6, 1, 5, 4};
-    int size = sizeof(a)/sizeof(int);
+int main() {
+    int n;
+    cin >> n;
+    int a[n];
 
-    quickSort(a, 0, size - 1);
+    for (int i = 0; i < n; ++i)
+        cin >> a[i];
 
-    for (auto i: a)
-        cout << i << " ";
-        cout << endl;
+    quickSort(a, 0, n-1);
+
+    for (int i=0; i < n; ++i)
+        cout << a[i] << " ";
+
+    return 0;
 }
+
+
+
+
